@@ -9,7 +9,7 @@ interface ProposalProps {
 export default function Proposal({ choices }: ProposalProps) {
     const [noCount, setNoCount] = useState(0);
     const [yesPressed, setYesPressed] = useState(false);
-    const yesButtonSize = noCount * 20 + 16;
+
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
 
@@ -145,13 +145,13 @@ export default function Proposal({ choices }: ProposalProps) {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ duration: 0.8 }}
                     >
-                        Will you be my Valentine, <span className="underline decoration-wavy">{choices.name}</span>?
+                        Will you be my Girlfriend, <span className="underline decoration-wavy">{choices.name}</span>?
                     </motion.h1>
 
                     <div className="flex flex-wrap flex-col md:flex-row gap-6 items-center justify-center mt-8 md:mt-12 w-full px-4">
                         <motion.button
-                            className={`rounded-full bg-green-500 hover:bg-green-600 font-bold text-white px-8 py-4 md:px-10 md:py-5 shadow-xl active:scale-95 text-xl md:text-2xl`}
-                            style={{ fontSize: yesButtonSize }}
+                            className={`rounded-full bg-green-500 hover:bg-green-600 font-bold text-white px-8 py-4 md:px-10 md:py-5 shadow-xl active:scale-95 transition-all duration-200`}
+                            style={{ fontSize: noCount * 20 + 20 }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={handleYes}
