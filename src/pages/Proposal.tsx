@@ -151,7 +151,7 @@ export default function Proposal({ choices }: ProposalProps) {
                     <div className="flex flex-wrap flex-col md:flex-row gap-6 items-center justify-center mt-8 md:mt-12 w-full px-4">
                         <motion.button
                             className={`rounded-full bg-green-500 hover:bg-green-600 font-bold text-white px-8 py-4 md:px-10 md:py-5 shadow-xl active:scale-95 text-xl md:text-2xl`}
-                            style={{ fontSize: yesButtonSize > 40 ? 40 : yesButtonSize }} // Cap size slightly for mobile if huge
+                            style={{ fontSize: yesButtonSize }}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             onClick={handleYes}
